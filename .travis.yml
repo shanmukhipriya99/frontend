@@ -6,5 +6,5 @@ before_install:
     - docker build -t shanmukhi99/frontend -f Dockerfile.dev .
 
 script:
-    - docker run shanmukhi99/frontend npm run test -- --coverage
+    - docker run -e CI=true shanmukhi99/frontend npm run test
     
